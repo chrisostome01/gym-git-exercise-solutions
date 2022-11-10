@@ -230,3 +230,100 @@ HEAD is now at e7c7dad feat: adds home and about page
 
 
 ```
+
+## Bundle 2
+
+
+### Exercises 1
+
+
+```bash
+
+ ~/Desktop/gitEx/bandle 
+(dev)                                                 (dev)
+$ git commit -m "feat: submit second exercise on bandle one"
+[dev 2dcf7b9] feat: submit second exercise on bandle one
+ 1 file changed, 163 insertions(+)                    ne
+
+ ~/Desktop/gitEx/bandle 
+(dev)                                                 (dev)
+$ git push -u origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.46 KiB | 746.00 KiB/s, done.
+done.                                                      
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0   local object.
+remote: Resolving deltas: 100% (1/1), completed with 1rcise-solutions.git local object.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   e7c7dad..2dcf7b9  dev -> dev                       (dev)
+branch 'dev' set up to track 'origin/dev'.
+
+
+ ~/Desktop/gitEx/bandle 
+(dev)
+$ git chekcout -b ft/bundle-2
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+
+ ~/Desktop/gitEx/bandle 
+(dev)
+$ git chekckout -b ft/bundle-2
+git: 'chekckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+
+ ~/Desktop/gitEx/bandle 
+(dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+
+ ~/Desktop/gitEx/bandle 
+(ft/bundle-2)
+$ git add .
+
+
+
+ ~/Desktop/gitEx/bandle 
+(ft/bundle-2)
+$ git commit -m "feat: adds service page"
+[ft/bundle-2 526286f] feat: adds service page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 service.html
+
+
+
+ ~/Desktop/gitEx/bandle 
+(ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 495 bytes | 247.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/bundle-2        
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+
+
+ ~/Desktop/gitEx/bandle
+(ft/bundle-2)
+$
+
+
+```
+
