@@ -651,6 +651,154 @@ branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 
 
 
+### Exercises 2
+
+```bash
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git commit -m "feat: add faq page"
+[ft/faq-page 2e640b2] feat: add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 241.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git commit -m "feat: submit bundle 3 exercise one"
+[ft/faq-page 3856f7e] feat: submit bundle 3 exercise one
+ 1 file changed, 328 insertions(+)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.02 KiB | 1.51 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   084914a..3856f7e  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git chekcout -b ft/home-page-redesign
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git commit -m "feat: redesign home page"
+[main 0d1f8f1] feat: redesign home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   569a4fb..0d1f8f1  main -> main
+branch 'main' set up to track 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git rebase main 
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git puhs -u origin ft/home-page-redesign
+git: 'puhs' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 3.97 KiB | 677.00 KiB/s, done.
+Total 11 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git commit -m "feat: adds some new changes"
+[ft/home-page-redesign d0f21b1] feat: adds some new changes
+ 1 file changed, 1 insertion(+)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   e5db5fd..d0f21b1  ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+
+```
 
 
 
