@@ -327,3 +327,223 @@ $
 
 ```
 
+
+## Bundle 4
+
+
+### Exercises 1
+
+
+```bash
+
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git commit -m "feat: submit bundle 3 exercise2"
+[ft/home-page-redesign 3f6ddb2] feat: submit bundle 3 exercise2
+ 1 file changed, 148 insertions(+)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 1.05 KiB | 538.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   d0f21b1..3f6ddb2  ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$  git remote add git-copy https://github.com/sezeranoJchrisostome/git-exercise-clone.git
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git commit -m "feat: redesign home.html for two repo"
+[main 8a6fe7e] feat: redesign home.html for two repo
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git push -u origin main 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 378 bytes | 94.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   0d1f8f1..8a6fe7e  main -> main
+branch 'main' set up to track 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git push -u git-copy main
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (29/29), 4.69 KiB | 686.00 KiB/s, done.
+Total 29 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), done.
+To https://github.com/sezeranoJchrisostome/git-exercise-clone.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'git-copy/main'.
+
+```
+
+
+### Exercises 2
+
+
+```bash
+
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$ gi add .
+bash: gi: command not found
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$  git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$ git commit -m "feat: add footer page"
+[ft/footer 17edc03] feat: add footer page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$  git commit -m "feat: adds more footer content"
+[ft/footer e7ae6cb] feat: adds more footer content
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$ git push -u origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 787 bytes | 393.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/footer
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/footer)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git merge squash ft/footer
+merge: squash - not something we can merge
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git merge --squash ft/footer
+Updating 8a6fe7e..e7ae6cb
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ restore
+usage: restore [OPTIONS] [PATTERN [PATTERN...]]
+Options are:
+
+   -a, --all               Restore all filesystems.
+   -l, --level=LEVEL       Start restoring from the given backup LEVEL
+                           (default 0).
+   -v, --verbose[=LEVEL]   Set verbosity level. Default 100.
+
+Informational options:
+   -h, --help              Display this help message.
+   -V, --version           Display program version.
+
+Send bug reports to bug-tar@gnu.org.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git restore .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git log 
+commit 8a6fe7e4e5c72cdfac9eb7ef96c2c3535e8b6951 (HEAD -> ft/squashing, origin/main, git-copy/main, main)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 17:36:27 2022 +0200
+
+    feat: redesign home.html for two repo
+
+commit 0d1f8f154f7bc362df0fd490f923e601834ec713
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 17:02:16 2022 +0200
+
+    feat: redesign home page
+
+commit 569a4fb5ea524484a1eab722cf9ca4139059b8f3
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 14:02:56 2022 +0200
+
+    feat: adds service changes on main
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 4694a87] footer changes squashing
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 495 bytes | 247.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/squashing
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/squashing)
+$
+
+
+```
+
