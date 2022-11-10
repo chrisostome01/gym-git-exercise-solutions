@@ -327,3 +327,479 @@ $
 
 ```
 
+
+
+
+## Bundle 3
+
+
+### Exercises 1
+
+
+```bash
+
+    
+ ~/Desktop/gitEx/bandle (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+ ~/Desktop/gitEx/bandle (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git add .
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git commit -m "feat: adds team page" 
+[ft/team-page ea2c7a3] feat: adds team page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git push -u origin ft/team-page
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ ! [rejected]        ft/team-page -> ft/team-page (non-fast-forward)
+error: failed to push some refs to 'https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 488 bytes | 244.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/team-page
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ ~/Desktop/gitEx/bandle (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git log
+commit 569a4fb5ea524484a1eab722cf9ca4139059b8f3 (HEAD -> ft/contact-page, origin/main, main)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 14:02:56 2022 +0200
+
+    feat: adds service changes on main
+
+commit e73abf7e0eba1b7e86dfbe09b5a7693389cf495a
+Merge: afa927e 60c0a2d
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Thu Nov 10 13:36:35 2022 +0200
+
+    Merge pull request #1 from sezeranoJchrisostome/ft/bundle-2
+
+    #GIT Exercises bandle2 #1
+
+commit 60c0a2d8c3480320e88b055aa00503ec4104d642 (origin/ft/bundle-2, ft/bundle-2)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git log
+commit ea2c7a36ed9a08cfe41ba90d64b97df95a831f02 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 15:55:54 2022 +0200
+
+    feat: adds team page
+
+commit 569a4fb5ea524484a1eab722cf9ca4139059b8f3 (origin/main, main, ft/contact-page)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 14:02:56 2022 +0200
+
+    feat: adds service changes on main
+
+commit e73abf7e0eba1b7e86dfbe09b5a7693389cf495a
+Merge: afa927e 60c0a2d
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Thu Nov 10 13:36:35 2022 +0200
+
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git fetch origin 
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~
+error: pathspec 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~' did not match any file(s) known to git
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout ea2c7a36ed9a08cfe41ba90d64b97df95a831f021
+error: pathspec 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021' did not match any file(s) known to git
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021~'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f021
+fatal: bad revision 'ea2c7a36ed9a08cfe41ba90d64b97df95a831f021'
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$
+
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git cherry-pick ea2c7a36ed9a08cfe41ba90d64b97df95a831f02
+[ft/contact-page fabc0ba] feat: adds team page
+ Date: Thu Nov 10 15:55:54 2022 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 490 bytes | 490.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/
+pull/new/ft/contact-page
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git add .
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git commit -m "feat: add faq page"
+[ft/faq-page 2e640b2] feat: add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 241.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$
+
+
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git log
+commit 2e640b24f3d34ba26b1bcc6de6c127bedca49bc2 (HEAD -> ft/faq-page, origin/ft/
+faq-page)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 16:39:41 2022 +0200
+
+    feat: add faq page
+
+commit fabc0ba89a51b1bbd8a08981623d1d9da677dc21 (origin/ft/contact-page, ft/cont
+act-page)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 15:55:54 2022 +0200
+
+    feat: adds team page
+
+commit 569a4fb5ea524484a1eab722cf9ca4139059b8f3 (origin/main, main)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 14:02:56 2022 +0200
+
+    feat: adds service changes on main
+
+commit e73abf7e0eba1b7e86dfbe09b5a7693389cf495a
+Merge: afa927e 60c0a2d
+Author: Chrissie <chrissiemhrk@gmail.com>
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+ ~/Desktop/gitEx/bandle (ft/team-page)
+$ git log
+commit ea2c7a36ed9a08cfe41ba90d64b97df95a831f02 (HEAD -> ft/team-page, origin/ft
+/team-page)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 15:55:54 2022 +0200
+
+    feat: adds team page
+
+commit 569a4fb5ea524484a1eab722cf9ca4139059b8f3 (origin/main, main)
+Author: sezerano jean chrysostome <sezeranochrisostom123@gmail.com>
+Date:   Thu Nov 10 14:02:56 2022 +0200
+
+    feat: adds service changes on main
+Revert "feat: adds team page"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ft/faq-page 084914a] Revert "feat: adds team page"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 team.html
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 287 bytes | 287.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   2e640b2..084914a  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ ~/Desktop/gitEx/bandle (ft/faq-page)
+
+
+
+```
+
+
+
+
+### Exercises 2
+
+```bash
+
+ ~/Desktop/gitEx/bandle (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git commit -m "feat: add faq page"
+[ft/faq-page 2e640b2] feat: add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 241.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git commit -m "feat: submit bundle 3 exercise one"
+[ft/faq-page 3856f7e] feat: submit bundle 3 exercise one
+ 1 file changed, 328 insertions(+)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.02 KiB | 1.51 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   084914a..3856f7e  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git chekcout -b ft/home-page-redesign
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git commit -m "feat: redesign home page"
+[main 0d1f8f1] feat: redesign home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   569a4fb..0d1f8f1  main -> main
+branch 'main' set up to track 'origin/main'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git rebase main 
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git puhs -u origin ft/home-page-redesign
+git: 'puhs' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 3.97 KiB | 677.00 KiB/s, done.
+Total 11 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git add .
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git commit -m "feat: adds some new changes"
+[ft/home-page-redesign d0f21b1] feat: adds some new changes
+ 1 file changed, 1 insertion(+)
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sezeranoJchrisostome/gym-git-exercise-solutions.git
+   e5db5fd..d0f21b1  ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+ MINGW64 ~/Desktop/gitEx/bandle (ft/home-page-redesign)
+
+```
+
+
+
+
